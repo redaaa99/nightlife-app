@@ -39020,7 +39020,7 @@ exports.default = Paper;
 /* 432 */
 /***/ (function(module, exports) {
 
-module.exports = {"dbUri":"mongodb://localhost/react_app","jwtSecret":"a secret phrase!!","access_token":"6p_VS7ciEMq5fzCbLrgXxW0OVIndxYBNpkySqxFO-ODMFL1qNXNR3KUEuVSC_fNxDnvcWnn0UfKf5d0ezeB_IC5mxzi5KYAtF4ZyIPhLBTUyVIzzdm2mNy2BgVGgWXYx","token_type":"Bearer"}
+module.exports = {"dbUri":"mongodb://redaaa99:redaader99@ds111124.mlab.com:11124/nightlife","jwtSecret":"a secret phrase!!","access_token":"6p_VS7ciEMq5fzCbLrgXxW0OVIndxYBNpkySqxFO-ODMFL1qNXNR3KUEuVSC_fNxDnvcWnn0UfKf5d0ezeB_IC5mxzi5KYAtF4ZyIPhLBTUyVIzzdm2mNy2BgVGgWXYx","token_type":"Bearer","app_id":"pEXaDRRGFcWyfBFQURuj2w","app_secret":"HnDSdT2ffqhxY8E7pmnsTcWuTmWfq1yOqEhg0kUh5nn7ArTfSswtFENEHRn4poPe"}
 
 /***/ }),
 /* 433 */
