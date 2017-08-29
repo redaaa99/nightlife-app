@@ -66,7 +66,14 @@ class LoginPage extends React.Component {
 
 
                 // change the current URL to /
-                this.context.router.replace('/?term='+this.props.location.query.term);
+                if(this.props.location.query.term===undefined)
+                {
+                    this.context.router.replace('/');
+                }
+                else
+                {
+                    this.context.router.replace('/?term='+this.props.location.query.term);
+                }
             } else {
                 // failure
 

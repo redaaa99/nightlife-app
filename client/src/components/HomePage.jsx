@@ -12,13 +12,14 @@ class HomePage extends React.Component {
     }
 
     componentDidMount(){
-        if(this.props.location.query.term)
-        {
             this.showResult(this.props.location.query.term);
-        }
     }
 
     showResult(query) {
+        if(query===undefined)
+        {
+            return;
+        }
         if(query.trim().toLowerCase().toString()!=="")
         {
             document.getElementById( 'display-search' ).innerHTML = "<div id=\"fountainG\">\n" +

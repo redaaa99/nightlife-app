@@ -36677,13 +36677,14 @@ var HomePage = function (_React$Component) {
     _createClass(HomePage, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            if (this.props.location.query.term) {
-                this.showResult(this.props.location.query.term);
-            }
+            this.showResult(this.props.location.query.term);
         }
     }, {
         key: 'showResult',
         value: function showResult(query) {
+            if (query === undefined) {
+                return;
+            }
             if (query.trim().toLowerCase().toString() !== "") {
                 document.getElementById('display-search').innerHTML = "<div id=\"fountainG\">\n" + "\t<div id=\"fountainG_1\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_2\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_3\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_4\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_5\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_6\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_7\" class=\"fountainG\"></div>\n" + "\t<div id=\"fountainG_8\" class=\"fountainG\"></div>\n" + "</div>";
                 smoothScroll("display-search");
@@ -41907,7 +41908,11 @@ var LoginPage = function (_React$Component) {
                     _Auth2.default.authenticateUser(xhr.response.token);
 
                     // change the current URL to /
-                    _this2.context.router.replace('/?term=' + _this2.props.location.query.term);
+                    if (_this2.props.location.query.term === undefined) {
+                        _this2.context.router.replace('/');
+                    } else {
+                        _this2.context.router.replace('/?term=' + _this2.props.location.query.term);
+                    }
                 } else {
                     // failure
 
